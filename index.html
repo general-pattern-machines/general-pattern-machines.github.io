@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
-
-<head lang="en">
+<html><head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>Large Language Models as General Pattern Machines</title>
+    <!-- <link rel="icon" type="image/png" href="img/favicon_2.png"> -->
 
     <meta name="description" content="Large Language Models as General Pattern Machines">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
     <link rel="stylesheet" href="css/app.css">
@@ -20,6 +19,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
     
+    <script src="js/app.js"></script>
+	
     <style>
         .nav-pills {
           position: relative;
@@ -36,19 +37,70 @@
     <div class="container" id="main">
         <div class="row mt-4">
             <h2 class="col-md-12 text-center">
-                <b>Large Language Models as General Pattern Machines</b> </br> 
+                <br>
+                <font size="+3">Large Language Models as General Pattern Machines</font> <br>  
             </h2>
         </div>
 
-<!--
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                <br>
+                <li><a href="https://suvirpmirchandani.com">Suvir Mirchandani</a></li>
+                <li><a href="https://fxia22.github.io">Fei Xia</a></li>
+                <li><a href="https://www.peteflorence.com">Pete Florence</a></li>
+                <li><a href="https://brianichter.com">Brian Ichter</a></li>
+                <li><a href="https://dannydriess.github.io">Danny Driess</a></li>
+                <li><a href="https://www.linkedin.com/in/montse90">Montserrat Gonzalez Arenas</a></li>
+                <br>
+                <li><a href="https://www.linkedin.com/in/kanishka-rao-57386a59">Kanishka Rao</a></li>
+                <li><a href="https://dorsa.fyi">Dorsa Sadigh</a></li>
+                <li><a href="https://andyzeng.github.io">Andy Zeng</a></li>
+                <br>
+                <br>
+                    <a href="https://www.deepmind.com/">
+                        <img src="img/google-deepmind-logo.png" height="35px"> 
+                        <!-- Google DeepMind -->
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                </ul>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-2 text-center">
+                <a href="">
+                <img src="img/paper_small.png" height="45px">
+                <h4><strong>Preprint (coming soon)</strong></h4>
+                </a>
+            </div>
+<!--             <div class="col-md-2 text-center">
+                <a href="https://github.com/google-research/">
+                <img src="img/youtube_icon.png" height="45px">
+                <h4><strong>Video (coming soon)</strong></h4>
+                </a>
+            </div>
+ -->            <div class="col-md-2 text-center">
+                <a href="https://github.com/google-research/">
+                <img src="img/github.png" height="45px">
+                <h4><strong>Code (coming soon)</strong></h4>
+                </a>
+            </div>
+            <div class="col-md-2 text-center">
+                <a href="https://github.com/google-research/">
+                <img src="img/colab.png" height="45px">
+                <h4><strong>PCFG Benchmark (coming soon)</strong></h4>
+                </a>
+            </div>
+        </div>
+
         <div class="row mt-4">
             <div class="col-md-12 text-center">
-                <video id="v0" width="80%" preload="metadata" playsinline muted loop autoplay>
-                    <source src="videos/webpage-front.mp4" type="video/mp4">
+                <video id="v0" width="50%" preload="metadata" playsinline="" muted="" loop="" autoplay="">
+                    <source src="videos/pattern-machines-teaser-video.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
--->
 
         <div class="row justify-content-md-center">
             <div class="col-md-10 col-lg-8">
@@ -56,16 +108,55 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    We observe that pretrained large language models (LLMs) are capable of autoregressively completing complex token sequences -- from arbitrary ones procedurally generated by probabilistic context-free grammars (PCFG), to more rich spatial patterns found in the Abstract Reasoning Corpus (ARC), a general AI benchmark, prompted in the style of ASCII art. Surprisingly, pattern completion proficiency can be partially retained even when the sequences are expressed using tokens randomly sampled from the vocabulary. These results suggest that without any additional training, LLMs can serve as general sequence modelers, driven by in-context learning. In this work, we investigate how these zero-shot capabilities may be applied to problems in robotics -- from extrapolating sequences of numbers that represent states over time to complete simple motions, to least-to-most prompting of reward-conditioned trajectories that can discover and represent closed-loop policies (e.g., a stabilizing controller for CartPole). While difficult to deploy today for real systems due to latency, context size limitations, and compute costs, the approach of using LLMs to drive low-level control may provide an exciting glimpse into how the patterns among words could be transferred to actions.
+                    We observe that pre-trained large language models (LLMs) are capable of autoregressively completing complex token sequences -- from arbitrary ones procedurally generated by probabilistic context-free grammars (PCFG), to more rich spatial patterns found in the Abstract Reasoning Corpus (ARC), a general AI benchmark, prompted in the style of ASCII art. Surprisingly, pattern completion proficiency can be partially retained even when the sequences are expressed using tokens randomly sampled from the vocabulary. These results suggest that without any additional training, LLMs can serve as general sequence modelers, driven by in-context learning. In this work, we investigate how these zero-shot capabilities may be applied to problems in robotics -- from extrapolating sequences of numbers that represent states over time to complete simple motions, to least-to-most prompting of reward-conditioned trajectories that can discover and represent closed-loop policies (e.g., a stabilizing controller for CartPole). While difficult to deploy today for real systems due to latency, context size limitations, and compute costs, the approach of using LLMs to drive low-level control may provide an exciting glimpse into how the patterns among words could be transferred to actions.
                 </p>
                 <p style="text-align:center;">
-                    <image src="img/pattern-machines-teaser.png" width="100%">
+                    <img src="img/pattern-machines-teaser.png" width="100%">
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3 class="mt-4 mb-2">
+                    Supplementary Videos
+                </h3>
+                <p class="text-justify">
+
                 </p>
             </div>
         </div>
 
 
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3>
+                    Citation 
+                </h3>
+                <a href="https://arxiv.org/abs/">[arxiv version]</a>
+                <div class="form-group col-md-12">
+                    <textarea id="bibtex" class="form-control" rows="8" readonly="">@inproceedings{generalpatternmachines2023,
+  author    = {Mirchandani, Suvir and Xia, Fei and Florence, Pete and Ichter, Brian and Driess, Danny and Arenas, Montserrat Gonzalez and Rao, Kanishka and Sadigh, Dorsa and Zeng, Andy},
+  title     = {Large Language Models as General Pattern Machines},
+  booktitle = {arXiv preprint},
+  year      = {2023},
+}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center mt-4">
+            <div class="col-md-10 col-lg-8">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    We would like to acknowledge Jie Tan, Peng Xu, Carolina Parada, Alexander Herzog, Jensen Gao, Joey Hejna, and Megha Srivastava for valuable feedback and discussions. The website template is from <a href="https://robot-help.github.io">Robots that Ask for Help</a>.
+                </p>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html>
+    <script>hljs.highlightAll();</script>
 
+
+</body></html>
