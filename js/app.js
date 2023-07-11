@@ -11,6 +11,10 @@ $(document).ready(function() {
                 3: 0 * 60 + 21.7 + 12 + 0.1,
                 4: 0 * 60 + 21.7 + 12 + 20.8 + 0.1,
             },
+            "clicker": {
+                1: 0 * 60 + 0.1,
+                2: 0 * 60 + 7.9 + 0.1,
+            }
         }
     
         var vid_end_times = {
@@ -20,27 +24,12 @@ $(document).ready(function() {
                 3: 0 * 60 + 21.7 + 12 + 20.8,
                 4: 0 * 60 + 21.7 + 12 + 20.8 + 14,
             },
+            "clicker": {
+                1: 0 * 60 + 7.9,
+                2: 0 * 60 + 7.9 + 6.5,
+            }
         }
     
-        // var vid_start_times = {
-        //     "sweeping": {
-        //         1: 0,
-        //         2: 21,
-        //         3: 21 + 12,
-        //         4: 21 + 12 + 21
-        //     },
-        // }
-    
-        // var vid_end_times = {
-        //     "sweeping": {
-        //         1: 21,
-        //         2: 21 + 12,
-        //         3: 21 + 12 + 21,
-        //         4: 21 + 12 + 21 + 14
-        //     },
-        // }
-
-
         function playSeg(vid, start_time, end_time, domain_name, desired_cmd_idx) {
             vid.pause();
             // vid.play()
