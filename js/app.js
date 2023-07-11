@@ -28,6 +28,9 @@ $(document).ready(function() {
                 10: 0 + 10.1 + 5.0 + 5.3 + 4.6 + 9.8 + 4.2 + 5.1 + 4.7 + 9.4 + 0.1,
                 11: 0 + 10.1 + 5.0 + 5.3 + 4.6 + 9.8 + 4.2 + 5.1 + 4.7 + 9.4 + 5.3 + 0.1,
                 12: 0 + 10.1 + 5.0 + 5.3 + 4.6 + 9.8 + 4.2 + 5.1 + 4.7 + 9.4 + 5.3 + 5.4 + 0.1,
+            },
+            "cartpole": {
+                1: 0 + 0.1,
             }
         }
     
@@ -55,12 +58,14 @@ $(document).ready(function() {
                 10: 0 + 10.1 + 5.0 + 5.3 + 4.6 + 9.8 + 4.2 + 5.1 + 4.7 + 9.4 + 5.3,
                 11: 0 + 10.1 + 5.0 + 5.3 + 4.6 + 9.8 + 4.2 + 5.1 + 4.7 + 9.4 + 5.3 + 5.4,
                 12: 0 + 10.1 + 5.0 + 5.3 + 4.6 + 9.8 + 4.2 + 5.1 + 4.7 + 9.4 + 5.3 + 5.4 + 5.6,
+            },
+            "cartpole": {
+                1: 60 + 34,
             }
         }
     
         function playSeg(vid, start_time, end_time, domain_name, desired_cmd_idx) {
             vid.pause();
-            // vid.play()
             vid.currentTime = start_time.toString();
             console.log(start_time.toString());
             vid.play()
@@ -74,20 +79,17 @@ $(document).ready(function() {
             vid.addEventListener("timeupdate", pausing_function);
         }
     
-        // demos
         $('select').on('change', function() {
             var sep_idx = this.value.indexOf('_');
             var domain_name = this.value.substring(0, sep_idx);
             var desired_cmd_idx = parseInt(this.value.substring(sep_idx + 1));
             var current_cmd_idx = current_cmd_idxs[domain_name];
             
-            // switch videos
             var vid = $("#vid_" + domain_name)[0];
             var start_time = vid_start_times[domain_name][desired_cmd_idx];
             var end_time = vid_end_times[domain_name][desired_cmd_idx];
             playSeg(vid, start_time, end_time, domain_name, desired_cmd_idx);
     
-            // set current to desired
             current_cmd_idxs[domain_name] = desired_cmd_idx;
         });
     });
