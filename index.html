@@ -68,9 +68,9 @@
 
         <div class="row justify-content-md-center">
             <div class="col-md-2 text-center">
-                <a href="">
+                <a href="https://arxiv.org/abs/2307.04721">
                 <img src="img/paper_small.png" height="45px">
-                <h4><strong>Preprint (coming soon)</strong></h4>
+                <h4><strong>Preprint</strong></h4>
                 </a>
             </div>
 <!--             <div class="col-md-2 text-center">
@@ -148,6 +148,56 @@
                         </div>
                     </div>
                     <div class="card mb-4 mt-4 text-dark bg-light">
+                        <h5 class="card-header">Loop Drawing</h5>
+                        <div class="card-body">
+                            <p>In the videos below, we show qualitative examples of text-davinci-003 completing a loop pattern given by a scripted demonstration. Videos are at 4x speed.</p>
+                            <select class="form-select" size="5" aria-label="size 5 select example">
+                                <option value="drawing_1">
+                                    Narrow [scripted demonstration]
+                                </option>
+                                <option value="drawing_2">
+                                    Narrow [completion, trial #1]
+                                </option>
+                                <option value="drawing_3">
+                                    Narrow [completion, trial #2]
+                                </option>
+                                <option value="drawing_4">
+                                    Narrow [completion, trial #3]
+                                </option>
+                                <option value="drawing_5">
+                                    Medium [scripted demonstration]
+                                </option>
+                                <option value="drawing_6">
+                                    Medium [completion, trial #1]
+                                </option>
+                                <option value="drawing_7">
+                                    Medium [completion, trial #2]
+                                </option>
+                                <option value="drawing_8">
+                                    Medium [completion, trial #3]
+                                </option>
+                                <option value="drawing_9">
+                                    Wide [scripted demonstration]
+                                </option>
+                                <option value="drawing_10">
+                                    Wide [completion, trial #1]
+                                </option>
+                                <option value="drawing_11">
+                                    Wide [completion, trial #2]
+                                </option>
+                                <option value="drawing_12">
+                                    Wide [completion, trial #3]
+                                </option>
+                            </select>
+                            <div class="col-md-12 mb-2">
+                                <video id="vid_drawing" width="100%" preload="metadata" playsinline="" controls="">
+                                    <source src="videos/drawing.mp4" type="video/mp4">
+                                </video>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="card mb-4 mt-4 text-dark bg-light">
                         <h5 class="card-header">Clicker Training</h5>
                         <div class="card-body">
                             <p>In the videos below, we show an example of how human-in-the-loop clicker training may be used to to teach an object pushing task. Videos are at 4x speed.</p>
@@ -179,7 +229,7 @@
                 <h3>
                     Citation 
                 </h3>
-                <a href="https://arxiv.org/abs/">[arxiv version]</a>
+                <a href="https://arxiv.org/abs/2307.04721">[arxiv version]</a>
                 <div class="form-group col-md-12">
                     <textarea id="bibtex" class="form-control" rows="8" readonly="">@inproceedings{generalpatternmachines2023,
   author    = {Mirchandani, Suvir and Xia, Fei and Florence, Pete and Ichter, Brian and Driess, Danny and Arenas, Montserrat Gonzalez and Rao, Kanishka and Sadigh, Dorsa and Zeng, Andy},
